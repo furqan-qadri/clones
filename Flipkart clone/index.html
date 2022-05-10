@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone-Flipkart</title>
+
+
+    <style>
+
+        body{
+            padding:0px;
+            margin:0px;
+        }
+        .header{
+            display: flexbox;
+            height: 20px;
+            background-color:#2874F0 ;
+            color:white;
+            font-weight: bold;
+            align-items: center;
+            justify-content: space-between;
+            padding-top:2px;
+            padding-bottom: 2px;;
+            /* padding:5px 20px; */
+        }
+
+        .header-right{
+            display:inline-block;
+            /* margin-top: -9px; */
+        }
+        .header-left{
+            display:inline-block;
+            margin-right:-8px;
+        }
+
+        .header-buttons{
+            font-size: 7px;
+            border:none;
+            background-color: #2874F0;
+            color:white;
+            font-weight: bold;
+        }
+
+        .header-left{
+            padding-left: 60px;
+            font-size: 10px;
+            
+        }
+
+        .header-right{
+            padding-right: 30px;
+            font-size: 10px;;
+            
+        }
+
+        .search-box{
+            width: 200px;
+            height: 8px;;
+        }
+
+        .section-2{
+            display: flex;
+            
+            /* grid-template-rows:min-content */
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding:5px 25px;
+
+        }
+
+        .section img{
+            width: 12px;
+            height: 12px;;
+        }
+
+        .div-image{
+            width: 30px;
+            height: 30px;;
+        }
+
+        .section-2-captions{
+            font-size: 6px;
+            margin-left: 3px;
+            margin-top: -3px;
+            font-weight:550
+        }
+    
+        .section-3-image{
+        
+            width:560px;
+            height: 110px;;
+            padding-top: 5px;
+            border-top:0.4px solid rgb(107, 104, 95);
+        }
+
+        .section-3{
+            position:relative;
+           
+        }
+
+        .section-3-link{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .section-3-buttons{
+            position: absolute;
+            top:45px;
+            height: 39px;
+            width: 18px;
+            border:none;
+            background-color: white;
+            border-radius: 3px;
+            border-top-left-radius: 0px;
+
+            border-bottom-left-radius: 0px;
+            text-align: center;
+            justify-content: center;
+            font-weight: bold;
+            padding-left: 4px;;
+        }
+
+        .section-3-button-right{
+            position: absolute;
+            right:0;
+            top:45px;
+            height: 39px;
+            width: 18px;
+            border:none;
+            background-color: white;
+            border-radius: 3px;
+            border-top-right-radius: 0px;
+
+            border-bottom-right-radius: 0px;
+            text-align: center;
+            justify-content: center;
+            font-weight: bold;
+            padding-left: 4px;;
+        }
+
+            .section-4{
+                display: grid;
+                grid-template-columns: 4fr 1fr;
+                /* position:relative; */
+            }
+
+            .section-4-images{
+                display: inline-block;
+                height: 70px;
+                width: 46px;
+                /* margin-left: 7px;
+                margin-right:7px; */
+                margin:12px;
+                margin-bottom: 0px;
+            }
+
+            .section-4-right-image{
+                max-width:100%;
+                max-height:100%;
+                /* margin-bottom: 0px; */
+            }
+
+            .section-4-img-div{
+                display: inline-block;
+                font-size: 8px;
+                position: relative;
+                /* position: absolute; */
+                /* left:12px; */
+                margin-bottom: 0px;
+            }
+
+            .section4-text-image{
+                position: absolute;
+                left:12px;
+                margin-top: 5px;
+                line-height: 12px;
+                font-size: 7px;
+                font-weight: 200;
+                /* margin-top:0px; */
+                /* margin:10px; */
+                /* border: 1px solid blue; */
+            }
+
+            .section-4{
+                margin-top: 6px;;
+                border: 0.6px solid grey;
+                /* grid */
+            }
+
+            .footer{
+                border:none;
+                margin-top: 5px;
+                display:flex;
+                flex-direction: row;
+                /* align-items: center; */
+                justify-content: space-between;
+                height: 170px;
+                /* padding:30px 30px 100px 30px; */
+                /* padding:30px; */
+                padding-left: 42PX;
+                padding-right: 42PX;
+                padding-bottom: 120px;
+                background-color: #182337;
+                color:#848485;
+                font-size: 12px;
+
+            
+            }
+
+            .footer-1 a{
+                color:white;
+                text-decoration: none;
+                line-height: 23px;
+                font-size: 15px;;
+            }
+
+            .footer-1{
+                /* margin-bottom: 19px; */
+                display: inline-block;
+                width:100%;
+                margin:25px;
+            }
+
+            .footer-bottom{
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                height: 60px;
+                padding-left: 60PX;
+                padding-right: 60PX;
+                background-color: #182337;
+                color:white;
+                border-top:1px solid grey;
+            }
+    </style>
+</head>
+<body>
+    
+      
+       <div class="header">
+           <div class="header-left">
+               Flipkart
+            <!-- <img width="100" src="//static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/fk-plus_3b0baa.png" alt="Flipkart" title="Flipkart" class="_2xm1JU"> -->
+               <input class="search-box" type="text">
+               <button style="height:10px;">S</button>
+           </div>
+           <div class="header-right">
+               <!-- <div></div>
+               <div></div>
+               <div></div>
+               <div></div> -->
+               <button class="header-buttons">Furqan</button>
+               <button class="header-buttons">Become a seller</button>
+               <button class="header-buttons">More</button>
+               <button class="header-buttons">Cart</button>
+           </div>
+       </div>
+
+       <div class="section-2">
+           <div ><img class="div-image"  src="below-header-icons/image_1.webp" alt=""> <div class="section-2-captions">Top offers</div></div>
+           <div><img class="div-image"   class="div-image"    src="below-header-icons/image_2.webp" alt=""><div class="section-2-captions">Grocery</div></div>
+           <div><img class="div-image"    src="below-header-icons/image_3.webp" alt=""><div class="section-2-captions">Mobiles</div></div>
+           <div><img class="div-image"    src="below-header-icons/image_4.webp" alt=""><div class="section-2-captions">Fashion</div></div>
+           <div><img class="div-image"    src="below-header-icons/image_5.webp" alt=""><div class="section-2-captions">Electronics</div></div>
+           <div><img class="div-image"    src="below-header-icons/image_6.webp" alt=""><div class="section-2-captions">Home</div></div>
+           <div><img class="div-image"    src="below-header-icons/image_7.webp" alt=""><div class="section-2-captions">Appliances</div></div>
+           <div><img class="div-image"    src="below-header-icons/image_8.webp" alt=""><div class="section-2-captions">Flights</div></div>
+           <div><img class="div-image"    src="below-header-icons/image_9.webp" alt=""><div class="section-2-captions">Beauty,toys and more</div></div>
+       </div>
+       <div class="section-3">
+
+        <a class="section-3-link" href="">
+            <img class="section-3-image" src="below-header-icons/mover.jpg" alt="">
+            
+        </a>
+
+        <button class="section-3-buttons"><</button>
+            
+            <button class="section-3-button-right">></button>
+      
+ 
+
+       </div>
+
+
+       <div class="section-4">
+           <div>
+
+
+               <div class="section-4-img-div"><img class="section-4-images" src="below-header-icons/uno.webp" alt="">
+                <div class="section4-text-image">
+                    
+                    <div>hello</div>
+                <div>hello</div>
+                <div>hello</div></div>
+                
+            
+        
+        
+        </div>
+            
+            <div class="section-4-img-div"> <img class="section-4-images"  src="below-header-icons/image_1.webp" alt=""> <div class="section4-text-image">
+                    
+                    <div>hello</div>
+                <div>hello</div>
+                <div>hello</div></div></div>
+
+                <div class="section-4-img-div"> <img class="section-4-images"  src="below-header-icons/image_1.webp" alt=""> <div class="section4-text-image">
+                    
+                    <div>hello</div>
+                <div>hello</div>
+                <div>hello</div></div></div>
+
+
+                <div class="section-4-img-div"> <img class="section-4-images"  src="below-header-icons/image_1.webp" alt=""> <div class="section4-text-image">
+                    
+                    <div>hello</div>
+                <div>hello</div>
+                <div>hello</div></div></div>
+
+
+                <div class="section-4-img-div"> <img class="section-4-images"  src="below-header-icons/image_1.webp" alt=""> <div class="section4-text-image">
+                    
+                    <div>hello</div>
+                <div>hello</div>
+                <div>hello</div></div></div>
+
+
+                <div class="section-4-img-div"> <img class="section-4-images"  src="below-header-icons/image_1.webp" alt=""> <div class="section4-text-image">
+                    
+                    <div>hello</div>
+                <div>hello</div>
+                <div>hello</div></div></div>
+
+
+            
+            <!-- <img class="section-4-images" src="below-header-icons/bottom_-1.webp" alt="">
+            <img class="section-4-images" src="below-header-icons/bottom_-2.webp" alt="">
+            <img class="section-4-images" src="below-header-icons/bottom_-3.webp" alt="">
+            <img class="section-4-images" src="below-header-icons/bottom_-4.webp" alt=""> -->
+           </div>
+           <div>
+               <img class="section-4-right-image" src="below-header-icons/clone.webp" alt="">
+           </div>
+       </div>
+   
+       <div class="footer">
+           <div class="footer-1">
+               <p class="footer-1-headline">ABOUT</p>
+               <a href="">Contact Us</a> <br>
+               <a href="">Contact Us</a> <br>
+               <a href="">Contact Us</a> <br>
+               <a href="">Contact Us</a> <br>
+               <a href="">Contact Us</a> <br>
+               <a href="">Contact Us</a> <br>
+               <a href="">Contact Us</a> <br>
+               <a href="">Contact Us</a> <br>
+               <a href="">Contact Us</a> <br>
+           </div>
+           <div class="footer-1"><p class="footer-1-headline">HELP</p>
+            <a href="">Contact Us</a> <br>
+            <a href="">Contact Us</a> <br>
+            <a href="">Contact Us</a> <br>
+            <a href="">Contact Us</a> <br>
+            <a href="">Contact Us</a> <br>
+            <a href="">Contact Us</a> <br>
+            <a href="">Contact Us</a> <br>
+          
+           </div>
+           <div class="footer-1"><p class="footer-1-headline">POLICY</p>
+            <a href="">Contact Us</a> <br>
+            <a href="">Contact Us</a> <br>
+            <a href="">Contact Us</a> <br>
+            <a href="">Contact Us</a> <br>
+            <a href="">Contact Us</a> <br>
+            <a href="">Contact Us</a> <br></div>
+           <div class="footer-1"><p class="footer-1-headline">SOCIAL</p>
+            <a href="">Contact Us</a> <br>
+            <a href="">Contact Us</a> <br>
+            <a href="">Contact Us</a> <br></div>
+
+            
+           <div class="footer-1"
+           style="border-left: 0.9px solid grey;
+           padding-left:20px"
+               
+            <p class="footer-1-headline" ">Mail us:
+
+            </p>
+
+            <p style="color:white">  Flipkart Internet Private Limited,
+                Buildings Alyssa, Begonia &
+                Clove Embassy Tech Village,
+                Outer Ring Road, Devarabeesanahalli Village,
+                Bengaluru, 560103,
+                Karnataka, India</p>
+          
+            <!-- <a href="">Contact Us</a> <br> -->
+        </div>
+        
+           <div class="footer-1">
+
+            <p class="footer-1-headline">Registered office address</p>
+           <p style="color:white">Flipkart Internet Private Limited,
+            Buildings Alyssa, Begonia &
+            Clove Embassy Tech Village,
+            Outer Ring Road, Devarabeesanahalli Village,
+            Bengaluru, 560103,
+            Karnataka, India
+            CIN : U51109KA2012PTC066107
+            Telephone: 1800 202 9898
+           </div></p> 
+       </div>
+
+       <div class="footer-bottom">
+
+        <div> <img src="below-header-icons/icons.svg" alt=""> 
+            Become a Seller</div>
+        <div><img src="below-header-icons/Unknown-7" alt=""> Advertise</div>
+        <div><img src="below-header-icons/gitt-cards.svg" alt=""> Gift Cards</div>
+        <div><img src="below-header-icons/advertise.svg" alt=""> Help center</div>
+        <div>© 2007-2022 Flipkart.com</div>
+        <div>
+            <img src="below-header-icons/payments.svg" alt="not fond image">
+        </div>
+       </div>
+
+
+</body>
+</html>

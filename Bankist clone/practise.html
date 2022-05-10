@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    .main{
+        background-color: #FFC305;
+        font-size: 9px;
+        /* width:180px; */
+        padding:9px 15px;
+        border-radius: 5px;
+        max-width: 180px;
+        margin-bottom: 20px;
+    }
+
+    .main-input{
+        font-size: 7px;
+        height: 50%;
+        /* width: 30px; */
+        border-radius: 2px;
+        width:100%;
+        border:none;
+        background-color: #FFD982;
+    }
+    .main-input-sub{
+        /* width: 10px;
+        height: 6px; */
+        align-items: center;
+        /* box-sizing: inherit; */
+        height: 100%;
+        margin:0;
+        /* font-size: 1.1rem; */
+       font-size: 7px;
+    }
+    .form-class{
+       
+        display: grid;
+        grid-template-columns: 2.5fr 2.5fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 7px 7px;
+        align-items: center;
+        margin:0;
+        /* column-gap: 0px; */
+        row-gap:0.1px;
+    }
+
+    .label-text{
+        font-size: 6px;
+        margin-left:19px;
+    }
+     
+
+
+
+    .transfer-2{
+        width: 150px;
+        /* border: 1px solid grey; */
+        border-radius: 5px;
+        padding: 10px 15px;
+        background-color: #FFC305;
+        margin-bottom: 10px;;
+        /* padding: 10px 25px; */
+    }
+
+    .request-2{
+        width: 150px;
+        /* border: 1px solid grey; */
+        border-radius: 5px;
+        padding: 10px 15px;
+        background-color: #8AD867;
+        margin-bottom: 10px;;
+        /* padding: 10px 25px; */
+    }
+
+    .close-2{
+        width: 150px;
+        /* border: 1px solid grey; */
+        border-radius: 5px;
+        padding: 10px 15px;
+        background-color: #FC525F;
+        margin-bottom: 10px;;
+        /* padding: 10px 25px; */
+    }
+
+
+    .form-second{
+        display: grid;
+        grid-template-columns: 2.5fr 2.5fr 1fr;
+        grid-template-rows: auto auto;
+        row-gap: 1px;
+        column-gap: 1px;
+        
+        
+    }
+
+    .input-forms{
+        width:85%;
+        border-radius: 3px;
+        font-size: 7px;
+        border:none;
+        opacity: 0.5;
+        /* background-color: #FFD982; */
+        
+        /* border-radius: 5px; */
+       
+        /* border:0.1px solid grey; */
+        /* height: 30%; */
+    }
+
+    .input-forms{
+        height: 60%;
+    }
+
+    .button{
+        width:85%;
+        border-radius: 3px;
+        font-size: 7px;
+        border:none;
+        height:90%;
+        margin-top: -1px;;
+        background-color: white;
+    }
+
+    .labels{
+        margin-top: -2px;
+        font-size: 6.5px;
+        margin-left:15px;
+    }
+
+    .heading{
+        margin: 4px 0px 7px 0px;; font-size: 9px;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h4 style="margin:0;">Transfer</h4>
+        <form class="form-class" action="">
+            <input class="main-input" type="text">
+            <input class="main-input" type="text">
+            <button class="main-input-sub">2</button>
+            <label class="label-text" for="">Transfer to</label>
+            <label class="label-text"for="">Amount</label>
+        </form>
+    </div>
+
+    <div class="transfer-2">
+        <h5 class="heading">Transfer money</h5>
+        <form class="form-second" action="">
+            <input class="input-forms" type="text">
+            <input class="input-forms" type="number">
+            <button class="button">-></button>
+            <label class=" labels"for="">Transfer to </label>
+            <label class=" labels"for="">Amount </label>
+        </form>
+    </div>
+
+    <div class="request-2">
+        <h5 class="heading">Request loan</h5>
+        <form class="form-second" action="">
+            <input class="input-forms" type="number">
+            <!-- <input class="input-forms" type="text"> -->
+            <button  style=" width:20px; height: 12px; margin-top:1px;;"class="button">-></button>
+            <br>
+            <label class=" labels"for="">Amount </label>
+            <!-- <label class=" labels"for="">Amount </label> -->
+        </form>
+    </div>
+
+
+    <div class="close-2">
+        <h5 class="heading">Close account</h5>
+        <form class="form-second" action="">
+            <input class="input-forms" type="text">
+            <input class="input-forms" type="text">
+            <button class="button">-></button>
+            <label class=" labels"for="">Confirm user</label>
+            <label class=" labels"for="">Confirm pin </label>
+        </form>
+    </div>
+
+
+ 
+</body>
+</html>
